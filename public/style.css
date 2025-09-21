@@ -104,6 +104,14 @@ main{ padding: 28px 0 40px; }
 }
 .panel h2{ margin: 0 0 10px; }
 .subtitle{ color: var(--muted); margin: 0 0 18px; }
+/* Apply header */
+.company-line{ font-size: 14px; }
+.apply-meta{ display: flex; flex-wrap: wrap; gap: 8px 10px; color: var(--muted); font-size: 14px; }
+/* Job details */
+.job-details{ border-top: 1px solid var(--border); padding-top: 12px; }
+.meta-list{ list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.meta-list li{ color: var(--muted); }
+.meta-list strong{ color: var(--text); margin-right: 6px; }
 
 /* Buttons */
 .btn{
@@ -120,9 +128,13 @@ main{ padding: 28px 0 40px; }
 .btn-primary:hover{ background: var(--primary-600); border-color: var(--primary-700); }
 
 
-.form .btn + .btn{ margin-left: 12px; }
+.form .btn + .btn{ margin-left: 4px; }
 .form .btn{ height: 44px; padding: 0 16px; line-height: 1; -webkit-appearance: none; appearance: none; }
 .btn-ghost{ background: color-mix(in oklab, var(--primary) 10%, transparent); color: var(--primary); border-color: color-mix(in oklab, var(--primary) 35%, var(--border)); }
+
+/* Normalize the action row on forms (e.g., apply page) */
+.form > div:last-child{ display: flex; align-items: stretch; gap: 12px; }
+.form > div:last-child .btn{ height: 44px; padding: 0 16px; line-height: 1; border-width: 1px; }
 
 /* Chips / Badges */
 .chips{ display: flex; flex-wrap: wrap; gap: 6px; }

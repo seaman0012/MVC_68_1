@@ -1,10 +1,14 @@
 <%- include('../partials/header') %>
 <div class="panel" style="margin-bottom:16px;">
-  <h2>สมัครงาน: <%= job.title %></h2>
-  <p class="subtitle">
-    ประเภท: <strong><%= job.type === 'internship' ? 'สหกิจศึกษา' : 'งานปกติ' %></strong> •
-  รหัสงาน: <%= job.id %> • ปิดรับ: <%= new Date(job.deadline).toLocaleString('th-TH', { hour12: false }) %>
-  </p>
+  <h2 style="margin-bottom:6px;"><%= job.title %></h2>
+  <div class="company-line" style="margin-bottom:8px;color:var(--muted)">
+    <strong><%= company ? company.name : 'ไม่ระบุบริษัท' %></strong>
+    <span style="opacity:.8">• <%= company && company.location ? company.location : '-' %></span>
+  </div>
+  <div class="chips" style="margin-bottom:10px;">
+    <span class="chip"><%= job.type === 'internship' ? 'สหกิจศึกษา' : 'งานปกติ' %></span>
+    <span class="chip">รหัสงาน: <%= job.id %></span>
+  </div>
 
   <% if (!currentUser) { %>
     <div class="error">กรุณาเข้าสู่ระบบด้วยบัญชีนักศึกษาเพื่อสมัคร</div>
@@ -13,15 +17,27 @@
     <div class="error"><%= error %></div>
   <% } %>
 
+  <div class="job-details" style="margin:16px 0 8px;">
+    <h3 style="margin:0 0 6px;">รายละเอียดงาน</h3>
+    <p style="margin:0 0 10px; color:var(--muted)"><%= job.description %></p>
+    <ul class="meta-list">
+      <li><strong>บริษัท:</strong> <%= company ? company.name : 'ไม่ระบุบริษัท' %></li>
+      <li><strong>ประเภท:</strong> <%= job.type === 'internship' ? 'สหกิจศึกษา' : 'งานปกติ' %></li>
+      <li><strong>ที่ตั้ง:</strong> <%= company && company.location ? company.location : '-' %></li>
+      <li><strong>ปิดรับ:</strong> <%= new Date(job.deadline).toLocaleString('th-TH', { hour12: false }) %></li>
+    </ul>
+  </div>
+
   <form class="form" method="post" action="/applications/<%= job.id %>">
     <input type="hidden" name="clientLocalTime" id="clientLocalTimeInput" />
     <div>
-      <label class="label">ยืนยันการสมัคร</label>
-      <p class="subtitle">เมื่อกดยืนยัน ระบบจะบันทึกเวลาจากเครื่องของคุณและเวลาจากเซิร์ฟเวอร์</p>
+      <!-- <label class="label">ยืนยันการสมัคร</label> -->
+      <!-- <label class="label">เมื่อกดยืนยัน ระบบจะบันทึกเวลาจากเครื่องของคุณและเวลาจากเซิร์ฟเวอร์</label> -->
+      <!-- <p class="subtitle">เมื่อกดยืนยัน ระบบจะบันทึกเวลาจากเครื่องของคุณและเวลาจากเซิร์ฟเวอร์</p> -->
     </div>
     <div>
       <button class="btn btn-primary" type="submit" <%= currentUser && currentUser.role === 'student' ? '' : 'disabled' %>>
-        ยืนยันการสมัคร
+        ยืนยัน
       </button>
       <a class="btn" href="/jobs">ย้อนกลับ</a>
     </div>
