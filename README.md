@@ -16,8 +16,6 @@
 
 ## ภาษา: Node.js, Express, EJS, CSS
 
----
-
 ## สถาปัตยกรรม (Architecture)
 
 MVC Ideas
@@ -83,22 +81,8 @@ Flow
    └─ applications.json            # ใบสมัครที่บันทึกแล้ว
 ```
 
----
 
-## การติดตั้งและรัน
-
-ติดตั้ง
-```bash
-npm install
-```
-
-รัน
-```bash
-npm start
-# เปิด http://localhost:3000
-```
-
-บัญชีตัวอย่าง
+### บัญชีตัวอย่าง
 - นักศึกษา: `student1 / 123456`
 - นักศึกษา: `student2 / 123456`
 - แอดมิน: `admin / admin123`
