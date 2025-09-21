@@ -12,11 +12,8 @@
 3. Open browser
    - http://localhost:3000
 
----
-
-## ภาษา: Node.js, Express, EJS, CSS
-
 ## สถาปัตยกรรม (Architecture)
+ภาษา: Node.js, Express, EJS, CSS
 
 MVC Ideas
 - Model: โครงสร้างข้อมูล + business rule และการเข้าถึงข้อมูล (Read/Write JSON)
@@ -32,14 +29,12 @@ Flow
 
 ---
 
-## Arichitecture
-
 ```text
 .
 ├─ app.js                          # Entry point: ตั้งค่า Express, EJS, Static, Session, ต่อ Route
 ├─ package.json                    # Scripts/Dependencies
 ├─ public/
-│  └─ style.css                    # สไตล์รวมของระบบ (มี Dark Mode + การ์ด + ตาราง + ปุ่ม)
+│  └─ style.css                    # สไตล์รวมของระบบ
 ├─ views/
 │  ├─ partials/
 │  │  ├─ header.ejs                # แถบนำทาง + ปุ่มสลับธีม + user badge
@@ -81,17 +76,10 @@ Flow
    └─ applications.json            # ใบสมัครที่บันทึกแล้ว
 ```
 
+---
 
 ### บัญชีตัวอย่าง
 - นักศึกษา: `student1 / 123456`
 - นักศึกษา: `student2 / 123456`
 - แอดมิน: `admin / admin123`
 
-
-
-## การต่อยอด
-
-- เปลี่ยน data layer จาก JSON ไป DB จริง (เช่น PostgreSQL/MongoDB)
-- เพิ่มการอัปโหลดไฟล์เรซูเม่
-- ระบบสิทธิ์ละเอียดขึ้น (RBAC)
-- ใช้ Passport.js หรือ JWT สำหรับ auth
