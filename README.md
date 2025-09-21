@@ -11,24 +11,14 @@
    ```
 3. Open browser
    - http://localhost:3000
+   - 
+## Account
+- นักศึกษา: `student1 / 123456`
+- นักศึกษา: `student2 / 123456`
+- แอดมิน: `admin / admin123`
 
-## สถาปัตยกรรม (Architecture)
-ภาษา: Node.js, Express, EJS, CSS
 
-MVC Ideas
-- Model: โครงสร้างข้อมูล + business rule และการเข้าถึงข้อมูล (Read/Write JSON)
-- View: หน้าจอที่ผู้ใช้ (EJS)
-- Controller: ประมวลผลคำขอจาก Route เรียกใช้ Model แล้วส่งข้อมูลไป View
-
-Flow
-1) ผู้ใช้เข้าหน้าเว็บ → Route จับ URL
-2) Route เรียก Controller ที่เกี่ยวข้อง
-3) Controller ใช้ Model อ่าน/ตรวจ/บันทึกข้อมูล
-4) Controller ส่งข้อมูลให้ View (EJS) เรนเดอร์ตอบกลับ
-5) หากเป็นการส่งฟอร์ม → ตรวจสิทธิ์/กฎ → บันทึก → redirect ตาม business rule
-
----
-
+## Architecture
 ```text
 .
 ├─ app.js                          # Entry point: ตั้งค่า Express, EJS, Static, Session, ต่อ Route
@@ -75,11 +65,3 @@ Flow
    ├─ users.json                   # บัญชีเข้าสู่ระบบ (เช่น admin/student)
    └─ applications.json            # ใบสมัครที่บันทึกแล้ว
 ```
-
----
-
-### บัญชีตัวอย่าง
-- นักศึกษา: `student1 / 123456`
-- นักศึกษา: `student2 / 123456`
-- แอดมิน: `admin / admin123`
-
