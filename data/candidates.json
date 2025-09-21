@@ -1,0 +1,12 @@
+[
+  { "id": "10000001", "firstName": "Anan",   "lastName": "Anon",     "email": "anan@example.com",   "status": "studying" },
+  { "id": "10000002", "firstName": "Benja",  "lastName": "Boonyarat",  "email": "benja@example.com",  "status": "graduated" },
+  { "id": "10000003", "firstName": "Chai",   "lastName": "Kornprasert","email": "chai@example.com",   "status": "studying" },
+  { "id": "10000004", "firstName": "Dao",    "lastName": "Thongchai",  "email": "dao@example.com",    "status": "graduated" },
+  { "id": "10000005", "firstName": "Ek",     "lastName": "Rattanakorn", "email": "ek@example.com",     "status": "studying" },
+  { "id": "10000006", "firstName": "Fon",    "lastName": "Prakai",     "email": "fon@example.com",    "status": "graduated" },
+  { "id": "10000007", "firstName": "Golf",   "lastName": "Chatchai",   "email": "golf@example.com",   "status": "studying" },
+  { "id": "10000008", "firstName": "Hana",   "lastName": "Sirirat",    "email": "hana@example.com",   "status": "graduated" },
+  { "id": "10000009", "firstName": "Ice",    "lastName": "Nanthika",   "email": "ice@example.com",    "status": "studying" },
+  { "id": "10000010", "firstName": "Jane",   "lastName": "Pimchanok",  "email": "jane@example.com",   "status": "graduated" }
+]

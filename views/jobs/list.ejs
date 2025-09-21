@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+<div class="panel" style="margin-bottom:16px;">
+  <h2>ตำแหน่งงานที่เปิดรับ</h2>
+  <p class="subtitle">สมัครได้เฉพาะเมื่อเข้าสู่ระบบเป็นนักศึกษา</p>
+</div>
+
+<% if (jobs.length === 0) { %>
+  <div class="panel"><p>ยังไม่มีตำแหน่งงานที่เปิดรับ</p></div>
+<% } else { %>
+  <div class="grid">
+    <% jobs.forEach(job => { const company = companyMap[job.companyId]; %>
+      <div class="card">
+        <div class="chips" style="margin-bottom:8px;">
+          <span class="badge badge-open">เปิดรับ</span>
+          <span class="chip"><%= job.type === 'internship' ? 'สหกิจศึกษา' : 'งานปกติ' %></span>
+          <span class="chip">บริษัท: <%= company ? company.name : 'N/A' %></span>
+        </div>
+        <h3><%= job.title %></h3>
+  <div class="meta">ปิดรับ: <%= new Date(job.deadline).toLocaleString('th-TH', { hour12: false }) %></div>
+        <p style="margin-top:8px; margin-bottom:16px; color:var(--muted)"><%= job.description %></p>
+        <a class="btn btn-primary" href="/jobs/<%= job.id %>/apply">สมัคร</a>
+      </div>
+    <% }) %>
+  </div>
+<% } %>
+<%- include('../partials/footer') %>

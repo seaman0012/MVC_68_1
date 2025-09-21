@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+<div class="panel" style="margin-bottom:16px;">
+  <h2>สมัครงาน: <%= job.title %></h2>
+  <p class="subtitle">
+    ประเภท: <strong><%= job.type === 'internship' ? 'สหกิจศึกษา' : 'งานปกติ' %></strong> •
+  รหัสงาน: <%= job.id %> • ปิดรับ: <%= new Date(job.deadline).toLocaleString('th-TH', { hour12: false }) %>
+  </p>
+
+  <% if (!currentUser) { %>
+    <div class="error">กรุณาเข้าสู่ระบบด้วยบัญชีนักศึกษาเพื่อสมัคร</div>
+  <% } %>
+  <% if (error) { %>
+    <div class="error"><%= error %></div>
+  <% } %>
+
+  <form class="form" method="post" action="/applications/<%= job.id %>">
+    <input type="hidden" name="clientLocalTime" id="clientLocalTimeInput" />
+    <div>
+      <label class="label">ยืนยันการสมัคร</label>
+      <p class="subtitle">เมื่อกดยืนยัน ระบบจะบันทึกเวลาจากเครื่องของคุณและเวลาจากเซิร์ฟเวอร์</p>
+    </div>
+    <div>
+      <button class="btn btn-primary" type="submit" <%= currentUser && currentUser.role === 'student' ? '' : 'disabled' %>>
+        ยืนยันการสมัคร
+      </button>
+      <a class="btn" href="/jobs">ย้อนกลับ</a>
+    </div>
+  </form>
+</div>
+
+ 
+
+<script>
+  document.getElementById('clientLocalTimeInput').value = new Date().toString();
+  </script>
+<%- include('../partials/footer') %>

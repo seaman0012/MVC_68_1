@@ -1,0 +1,32 @@
+[
+  {
+    "id": "80461343",
+    "jobId": "30000010",
+    "candidateId": "10000001",
+    "jobType": "internship",
+    "appliedAt": "2025-09-21T03:10:16.698Z",
+    "clientLocalTime": "Sun Sep 21 2025 10:10:15 GMT+0700 (Indochina Time)",
+    "status": "submitted",
+    "adminGrade": "A"
+  },
+  {
+    "id": "41019252",
+    "jobId": "30000007",
+    "candidateId": "10000001",
+    "jobType": "internship",
+    "appliedAt": "2025-09-21T04:04:13.722Z",
+    "clientLocalTime": "Sun Sep 21 2025 11:04:13 GMT+0700 (Indochina Time)",
+    "status": "submitted",
+    "adminGrade": ""
+  },
+  {
+    "id": "15441869",
+    "jobId": "30000004",
+    "candidateId": "10000001",
+    "jobType": "internship",
+    "appliedAt": "2025-09-21T04:23:44.575Z",
+    "clientLocalTime": "Sun Sep 21 2025 11:23:44 GMT+0700 (Indochina Time)",
+    "status": "submitted",
+    "adminGrade": ""
+  }
+]

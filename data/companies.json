@@ -1,0 +1,4 @@
+[
+  { "id": "20000001", "name": "TechNova Co., Ltd.", "email": "contact@technova.example", "location": "Bangkok" },
+  { "id": "20000002", "name": "GreenByte Solutions", "email": "hr@greenbyte.example", "location": "Chiang Mai" }
+]

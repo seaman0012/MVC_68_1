@@ -1,0 +1,92 @@
+[
+  {
+    "id": "30000001",
+    "title": "Frontend Developer (React)",
+    "description": "พัฒนา UI ด้วย React, CSS, และ REST APIs",
+    "companyId": "20000001",
+    "deadline": "2025-12-31T23:59:59.000Z",
+    "status": "open",
+    "type": "regular"
+  },
+  {
+    "id": "30000002",
+    "title": "Backend Developer (Node.js)",
+    "description": "ออกแบบและพัฒนา REST API บน Node.js และ Express",
+    "companyId": "20000001",
+    "deadline": "2025-11-30T23:59:59.000Z",
+    "status": "open",
+    "type": "regular"
+  },
+  {
+    "id": "30000003",
+    "title": "QA Engineer (Internship)",
+    "description": "ทดสอบระบบ เขียน test cases และรายงานบั๊ก",
+    "companyId": "20000001",
+    "deadline": "2025-10-31T23:59:59.000Z",
+    "status": "open",
+    "type": "internship"
+  },
+  {
+    "id": "30000004",
+    "title": "Data Analyst (Internship)",
+    "description": "ช่วยวิเคราะห์ข้อมูลด้วย SQL/Excel/BI",
+    "companyId": "20000002",
+    "deadline": "2025-11-15T23:59:59.000Z",
+    "status": "open",
+    "type": "internship"
+  },
+  {
+    "id": "30000005",
+    "title": "Mobile Developer (Flutter)",
+    "description": "พัฒนาแอป Flutter ทั้ง iOS/Android",
+    "companyId": "20000002",
+    "deadline": "2025-12-15T23:59:59.000Z",
+    "status": "open",
+    "type": "regular"
+  },
+  {
+    "id": "30000006",
+    "title": "DevOps Engineer",
+    "description": "จัดการ CI/CD, Docker, และ Cloud Infrastructure",
+    "companyId": "20000001",
+    "deadline": "2025-12-01T23:59:59.000Z",
+    "status": "open",
+    "type": "regular"
+  },
+  {
+    "id": "30000007",
+    "title": "Security Analyst (Internship)",
+    "description": "ช่วยตรวจสอบความปลอดภัยของระบบ",
+    "companyId": "20000002",
+    "deadline": "2025-10-20T23:59:59.000Z",
+    "status": "open",
+    "type": "internship"
+  },
+  {
+    "id": "30000008",
+    "title": "Full Stack Developer",
+    "description": "ดูแลทั้ง Frontend/Backend พัฒนา feature ใหม่",
+    "companyId": "20000001",
+    "deadline": "2025-12-05T23:59:59.000Z",
+    "status": "open",
+    "type": "regular"
+  },
+  {
+    "id": "30000009",
+    "title": "UI/UX Designer",
+    "description": "ออกแบบประสบการณ์ผู้ใช้และต้นแบบหน้าจอ",
+    "companyId": "20000002",
+    "deadline": "2025-11-05T23:59:59.000Z",
+    "status": "open",
+    "type": "regular"
+  },
+  {
+    "id": "30000010",
+    "title": "Research Assistant (Internship)",
+    "description": "ช่วยงานวิจัยด้าน Computer Vision",
+    "companyId": "20000002",
+    "deadline": "2025-10-25T23:59:59.000Z",
+    "status": "open",
+    "type": "internship"
+  }
+]

@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+<div class="panel" style="max-width: 520px; margin: 0 auto;">
+  <h2>เข้าสู่ระบบ</h2>
+  <p class="subtitle">บัญชีนักศึกษา: student1/123456 <br>บัญชีแอดมิน: admin/admin123 </p>
+  
+
+  <% if (error) { %>
+    <div class="error"><%= error %></div>
+  <% } %>
+
+  <form class="form" method="post" action="/login">
+    <div>
+      <label class="label">ชื่อผู้ใช้</label>
+      <input class="input" type="text" name="username" placeholder="เช่น student1" required />
+    </div>
+    <div>
+      <label class="label">รหัสผ่าน</label>
+      <input class="input" type="password" name="password" placeholder="••••••" required />
+    </div>
+    <div style="display:flex; gap:10px; margin-top:8px;">
+      <button class="btn btn-primary" type="submit">เข้าสู่ระบบ</button>
+      <a class="btn" href="/jobs">ดูงานที่เปิดรับ</a>
+    </div>
+  </form>
+</div>

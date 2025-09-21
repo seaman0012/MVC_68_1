@@ -1,0 +1,60 @@
+<%- include('../partials/header') %>
+<div class="panel" style="margin-bottom:16px;">
+  <h2>แผงผู้ดูแล • รายการใบสมัคร</h2>
+  <p class="subtitle">ตรวจสอบและบันทึกเกรดให้ผู้สมัคร</p>
+  <% if (message) { %>
+    <div class="success"><%= message %></div>
+  <% } %>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Application ID</th>
+          <th>Job</th>
+          <th>Candidate</th>
+          <th>ประเภท</th>
+          <th>สมัครเมื่อ (Server)</th>
+          <th>เวลาเครื่อง (Client)</th>
+          <th>เกรด (Admin)</th>
+          <th class="actions">บันทึก</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% applications.forEach(app => {
+          const job = jobMap[app.jobId];
+          const c = candidateMap[app.candidateId];
+          const formId = `grade-${app.id}`;
+        %>
+          <tr>
+            <td><%= app.id %></td>
+            <td>
+              <div style="font-weight:600;"><%= job ? job.title : app.jobId %></div>
+              <div style="color:var(--muted); font-size:12px;"><%= app.jobId %></div>
+            </td>
+            <td>
+              <div style="font-weight:600;"><%= c ? (c.firstName + ' ' + c.lastName) : app.candidateId %></div>
+              <div style="color:var(--muted); font-size:12px;"><%= app.candidateId %></div>
+            </td>
+            <td><%= app.jobType === 'internship' ? 'สหกิจศึกษา' : 'งานปกติ' %></td>
+            <td><%= new Date(app.appliedAt).toLocaleString('th-TH', { hour12: false }) %></td>
+            <td style="max-width: 260px;"><%= app.clientLocalTime %></td>
+
+            <!-- คอลัมน์เกรด: มีฟอร์มและอินพุต -->
+            <td>
+              <form id="<%= formId %>" method="post" action="/admin/applications/<%= app.id %>/grade">
+                <input class="input" style="max-width: 110px;" type="text" name="grade" value="<%= app.adminGrade %>" placeholder="A/B/C..." />
+              </form>
+            </td>
+
+            <!-- คอลัมน์บันทึก: ปุ่มส่งฟอร์ม โดยอ้างอิงฟอร์มจากคอลัมน์ก่อนหน้า -->
+            <td class="actions">
+              <button class="btn btn-primary" type="submit" form="<%= formId %>">บันทึก</button>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<%- include('../partials/footer') %>  
